@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>T</title>
+		<script type="text/javascript" src="js/jquery-3.5.1.min.js" ></script>
+		<script type="text/javascript">
+			function get(){
+				var turntime = jQuery("#in").val();
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<br>
+
+		<video id="video1" controls="controls">
+			<source src="videos/our_souls_together_heavenward_fly.mp4" type="video/mp4"> 您的浏览器不支持 HTML5 video mp4标签。
+		</video>
+		<button onclick="getCurTime()" type="button">获得当前时间的位置</button>
+		<button onclick="setCurTime()" type="button">将时间位置设置为 5 秒</button>
+		<script>
+			var a;
+		</script>
+
+		<form>
+			<input type="text" name="in" id="in" />
+			<button onclick="get()">get</button>
+		</form>
+		<button onclick="PauseorPlay()" type="button">暂停/继续</button>
+
+		<script>
+			myVid = document.getElementById("video1");
+
+			function getCurTime() {
+				alert(myVid.currentTime);
+			}
+
+			function setCurTime() {
+				myVid.currentTime = 5;
+			}
+
+			function PauseorPlay() {
+				if(myVid.paused) {
+					myVid.play();
+				} else {
+					myVid.pause();
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

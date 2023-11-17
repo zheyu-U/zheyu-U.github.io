@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>index</title>
+	</head>
+	
+	<style>
+		ul.go {
+    		list-style-type: none;
+    		margin: 0;
+    		padding: 0;
+    		width: 200px;
+    		 background-color: #f1f1f1; 
+}
+ 
+		li.go a {
+			border-left-style:solid;
+			border-color:skyblue;
+    		display: block;
+    		color: black;
+    		padding: 8px 16px;
+    		text-decoration: none;
+}
+ 
+		/* 鼠标移动到选项上修改背景颜色 */
+		li.go a:hover {
+   			background-color: #555;
+    		color: white;
+		}
+		
+		body{
+			background-color: gainsboro;
+		}
+		
+	</style>
+	
+	<body>
+		<ul class="go">
+			<li class="go"><a href="direction.html">导航页</a></li>
+			
+		</ul>
+		<p>Testing!</p>
+		
+		<p id="click">JavaScript 可以触发事件，就像按钮点击。</p>
+
+		<script>
+		function myFunction()
+		{
+			document.getElementById("click").innerHTML="<p>hello</p>";
+		}
+		</script>
+		<button type="button" onclick="myFunction()">点我</button>
+		
+		<div style="text-align:center"> 
+  			
+  
+  		<br/> 
+  			<video id="our_souls_together_heavenward_fly" width="840" controls="controls">
+  				<source src="videos/our_souls_together_heavenward_fly.mp4" type="video/mp4">
+  					
+   				您的浏览器不支持 HTML5 video 标签 mp4类型。
+			</video>
+			<p></p>
+			<button onclick="playPause()">播放/暂停</button> 
+			<button onclick="getCurTime()" type="button">获得当前时间的位置</button>
+			<button onclick="setCurTime()" type="button">将时间位置设置为 0 秒</button>
+		</div> 
+
+	<script> 
+		var myVideo=document.getElementById("our_souls_together_heavenward_fly"); 
+
+		function playPause()
+		{ 
+			if (myVideo.paused) 
+			  myVideo.play(); 
+			else 
+			  myVideo.pause(); 
+		} 
+		function getCurTime()
+		{ 
+  			alert(myVideo.currentTime+"s"); 
+  			
+		} 
+		function setCurTime()
+		{ 
+  			myVideo.currentTime=0;
+		}	 
+	</script>
+	<iframe src="//player.bilibili.com/player.html?aid=954778209&bvid=BV1NW4y1Q7Kg&cid=1163879460&page=1" scrolling="auto" border="0" frameborder="yes" framespacing="0" allowfullscreen="true"> </iframe>
+	</body>
+</html>

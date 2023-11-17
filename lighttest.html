@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>光效应</title>
+	</head>
+	<body>
+		<canvas id=" canvas" width=" 800" height=" 600">not support</canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext('2d') ;
+			var w = 800;
+			var h = 600;
+			var n = 0;
+			var g1 = context.createLinearGradient(0,0,w,0);
+			g1.addColorStop(0,'rgb(255,255,255)');
+			g1.addColorStop(1,'rgb(0,0,0)');
+			function draw () {
+				context.save();
+				if(n + + % 2) {
+					context.fillStyle = g1;
+				}
+				else{
+					context.fillStyle = " 000000";
+					
+				}
+				context.fillRect(0,0,w,h);
+				context.restore();
+				
+			}
+			setInterval("draw ()",1000);
+			
+		</script>
+	</body>
+</html>
