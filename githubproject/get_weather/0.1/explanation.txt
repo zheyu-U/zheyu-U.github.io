@@ -1,0 +1,3 @@
+天气预报基本完成
+功能：现在天气、现在气温、更新时间、风向、风速、预警提醒
+View more on https://zheyu-u.github.io/project/get_weather/0.1/explanation.txt and https://github.com/zheyu-U/get_weather#readme
